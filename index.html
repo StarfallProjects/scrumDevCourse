@@ -3,25 +3,44 @@
 <head>
 <meta charset="UTF-8">
 <title>Spectacular Rats</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <style>
 img {
 	height: 800px;
 }
 </style>
-
 </head>
 
 <body>
-<h1>Spectacular Rats</h1>
-<span id="time_span"></span> <a href="main-description.html">Description</a> <a href="./gallery.html">Gallery</a> <a href="./about.html">About</a>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a  class="navbar-brand" href="#">Spectacular Rats</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="main-description.html">Description</a></li>
+      <li><a  href="./gallery.html">Gallery</a></li>
+      <li><a  href="./about.html">About</a></li>
+    </ul>
+  </div>
+</nav>
+
 <hr />
-<img src="./images/babyrat.gif" alt="Homepage Rats"></img>
+<img style="margin: 10px" src="./images/babyrat.gif" alt="Homepage Rats"></img>
 <br/>
-<button id="hit-me-btn" type="button" onclick="incrementCount()">Hit Me!</button>
+<button style="margin: 10px" id="hit-me-btn" type="button" onclick="incrementCount()" class="btn btn-primary">Hit Me!</button>
 <audio autoplay>
 	<source src="https://raw.githubusercontent.com/StarfallProjects/scrumDevCourse/master/FieldRat.mp3" type="audio/mp3">
 </audio>
-<script>
+
+<footer class="footer" style="background-color:#0275d8; color:white">
+      <div class="container">
+        <span style="color:white" class="text-muted">Current time: <span id="time_span"></span></span>
+      </div>
+    </footer>
+	
+	<script>
 // TIME CODE
 (function updateTime(){
     var currentTime = new Date()

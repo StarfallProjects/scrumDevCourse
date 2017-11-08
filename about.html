@@ -4,14 +4,23 @@
 
 <meta charset="UTF-8">
 <title>About</title>
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 </head>
 <body>
-<h1>About</h1>
-<a href="index.html">Back</a>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a  class="navbar-brand" href="#">About</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="index.html">Back</a></li>
+    </ul>
+  </div>
+</nav>
 <hr />
 
+<h2>Developers</h2>
 <ul>
 <li>Nick Scott</li>
 <li>Deborah Barnard</li>
@@ -19,9 +28,15 @@
 <li>Sangeetha Sivanantham</li>
 </ul>
 
+<h2>Location</h2>
+<p>Granary Wharf House, 2 Canal Wharf, Leeds LS11 5PS</p>
+
 <div id="displayCount"></div>
 <script>
 var count = localStorage.getItem("count");
+if(count === undefined || count === null) {
+	count = 0;
+}
 document.getElementById("displayCount").innerHTML = "Hit count: " + count;
 </script>
 </body>
