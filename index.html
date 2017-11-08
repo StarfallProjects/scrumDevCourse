@@ -8,13 +8,27 @@ img {
 	height: 800px;
 }
 </style>
+
+</head>
+
+<body>
+<h1>Spectacular Rats</h1>
+<span id="time_span"></span> <a href="main-description.html">Description</a> <a href="./gallery.html">Gallery</a> <a href="./about.html">About</a>
+<hr />
+<img src="./images/babyrat.gif" alt="Homepage Rats"></img>
+<br/>
+<button id="hit-me-btn" type="button" onclick="incrementCount()">Hit Me!</button>
+<audio autoplay>
+	<source src="https://raw.githubusercontent.com/StarfallProjects/scrumDevCourse/master/FieldRat.mp3" type="audio/mp3">
+</audio>
 <script>
 // TIME CODE
-function updateTime(){
+(function updateTime(){
     var currentTime = new Date()
 	document.getElementById('time_span').innerHTML = currentTime;
-}
-setInterval(updateTime, 1000);
+	setInterval(updateTime, 1000);
+}());
+
 
 // COUNT CODE
 function incrementCount() {
@@ -34,18 +48,6 @@ function getCount() {
 }
 
 </script>
-</head>
-
-<body>
-<h1>Spectacular Rats</h1>
-<span id="time_span"></span> <a href="main-description.html">Description</a> <a href="./gallery.html">Gallery</a> <a href="./about.html">About</a>
-<hr />
-<img src="./images/babyrat.gif" alt="Homepage Rats"></img>
-<br/>
-<button id="hit-me-btn" type="button" onclick="incrementCount()">Hit Me!</button>
-<audio autoplay>
-	<source src="https://raw.githubusercontent.com/StarfallProjects/scrumDevCourse/master/FieldRat.mp3" type="audio/mp3">
-</audio>
 </body>
 
 </html>
